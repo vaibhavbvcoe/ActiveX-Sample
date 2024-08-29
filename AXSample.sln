@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AFXDROPDOWN", "AFXDROPDOWN\AFXDROPDOWN.vcxproj", "{58308A73-C1CC-4348-AE8F-93A132026481}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AxShadeButton", "AXShadeButton\AxShadeButton.vcxproj", "{BD03725D-9CFC-3957-9F24-6AE6A7D4A2A5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestClient", "TestClient\TestClient.vcxproj", "{89024505-FE91-4AF9-BE86-FA9D922E851F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58308A73-C1CC-4348-AE8F-93A132026481}.Debug|Win32.ActiveCfg = Debug|Win32
+		{58308A73-C1CC-4348-AE8F-93A132026481}.Debug|Win32.Build.0 = Debug|Win32
+		{58308A73-C1CC-4348-AE8F-93A132026481}.Release|Win32.ActiveCfg = Release|Win32
+		{58308A73-C1CC-4348-AE8F-93A132026481}.Release|Win32.Build.0 = Release|Win32
+		{BD03725D-9CFC-3957-9F24-6AE6A7D4A2A5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BD03725D-9CFC-3957-9F24-6AE6A7D4A2A5}.Debug|Win32.Build.0 = Debug|Win32
+		{BD03725D-9CFC-3957-9F24-6AE6A7D4A2A5}.Release|Win32.ActiveCfg = Release|Win32
+		{BD03725D-9CFC-3957-9F24-6AE6A7D4A2A5}.Release|Win32.Build.0 = Release|Win32
+		{89024505-FE91-4AF9-BE86-FA9D922E851F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{89024505-FE91-4AF9-BE86-FA9D922E851F}.Debug|Win32.Build.0 = Debug|Win32
+		{89024505-FE91-4AF9-BE86-FA9D922E851F}.Release|Win32.ActiveCfg = Release|Win32
+		{89024505-FE91-4AF9-BE86-FA9D922E851F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

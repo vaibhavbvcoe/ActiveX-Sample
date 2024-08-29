@@ -1,0 +1,83 @@
+// AxShadeButton.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (AxShadeButton.tlb) that will become a resource in
+// AxShadeButton.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(A4463185-5324-11D6-BB80-444553540000), version(1.0),
+  helpfile("AxShadeButton.hlp"),
+  helpstring("AxShadeButton ActiveX Control module"),
+  control ]
+library AXSHADEBUTTONLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CAxShadeButtonCtrl
+
+	[ uuid(A4463186-5324-11D6-BB80-444553540000),
+	  helpstring("Dispatch interface for AxShadeButton Control"), hidden ]
+	dispinterface _DAxShadeButton
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAxShadeButtonCtrl)
+			[id(DISPID_CAPTION), bindable, requestedit] BSTR Caption;
+			[id(DISPID_ENABLED), bindable, requestedit] boolean Enabled;
+			[id(DISPID_BORDERSTYLE), bindable, requestedit] short BorderStyle;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAxShadeButtonCtrl)
+			[id(1)] void SetShade(long shadeID, long granularity, long highlight, long coloring, long color);
+			[id(2)] void SetToolTipText(BSTR sUp, BSTR sDown);
+			[id(3)] OLE_COLOR SetTextColor(OLE_COLOR new_color);
+			[id(4)] void SetTextAlign(long nTextAlign);
+			[id(5)] void SetIcon(OLE_HANDLE hicon, long nalign, OLE_HANDLE hicondown, OLE_HANDLE hicinhighlight);
+			[id(6)] void SetFlat(BOOL bflat);
+			[id(DISPID_REFRESH)] void Refresh();
+			[id(7)] BOOL SetFont(BSTR sFontName, long lSize, long lWeight, BOOL bItalic, BOOL bUnderline);
+			[id(8)] void SetStyle(long nStyle, BOOL bFlat, BOOL bPushLike, BOOL bRedraw);
+			[id(9)] BOOL GetCheck();
+			[id(10)] long GetState();
+			[id(11)] void SetCheck(BOOL bCheck);
+			//}}AFX_ODL_METHOD
+	};
+
+	//  Event dispatch interface for CAxShadeButtonCtrl
+
+	[ uuid(A4463187-5324-11D6-BB80-444553540000),
+	  helpstring("Event interface for AxShadeButton Control") ]
+	dispinterface _DAxShadeButtonEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CAxShadeButtonCtrl)
+			[id(DISPID_CLICK)] void Click();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CAxShadeButtonCtrl
+
+	[ uuid(A4463188-5324-11D6-BB80-444553540000),
+	  helpstring("AxShadeButton Control"), control ]
+	coclass AxShadeButton
+	{
+		[default] dispinterface _DAxShadeButton;
+		[default, source] dispinterface _DAxShadeButtonEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

@@ -1,0 +1,55 @@
+// AFXDROPDOWN.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (AFXDROPDOWN.tlb) that will become a resource in
+// AFXDROPDOWN.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+#include"constants.h"
+
+[ uuid(42CA9B2A-EAD8-4A4E-9856-0ABB2E37F26B), version(1.0),
+  control ]
+library AFXDROPDOWNLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CAFXDROPDOWNCtrl
+	[ 
+		uuid(BB89747D-60E2-4856-AD95-71A5E292E841)	
+	]
+	dispinterface _DAFXDROPDOWN
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			
+	};
+
+	//  Event dispatch interface for CAFXDROPDOWNCtrl
+
+	[ 
+		uuid(361FD132-1B21-4FF8-94EA-81D95DABB3DF)	
+	]
+	dispinterface _DAFXDROPDOWNEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			[id(DISPID_SEL_CHANGE)] void OnSelChange();
+			[id(DISPID_CBN_SET_FOCUS)] void OnSetFocus();
+	};
+
+	//  Class information for CAFXDROPDOWNCtrl
+	[
+		uuid(061FA3B1-6249-4B10-BF85-CAC72A3DBC52)
+	]
+	coclass AFXDROPDOWN
+	{
+		[default] dispinterface _DAFXDROPDOWN;
+		[default, source] dispinterface _DAFXDROPDOWNEvents;
+	};
+
+};
